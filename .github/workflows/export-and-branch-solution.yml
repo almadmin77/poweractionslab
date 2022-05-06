@@ -14,18 +14,18 @@
       runs-on: windows-latest
       env:
       RUNNER_DEBUG: 1
-
+      
   steps:
   - uses: actions/checkout@v2
   with:
-      lfs: true
-  
+    lfs: true
+    
   - name: who-am-i action
   uses: microsoft/powerplatform-actions/who-am-i@v0
   with:
-      environment-url: 'https://org74c41697.crm.dynamics.com/'
-      user-name: 'admin@M365x22902777.onmicrosoft.com'
-      password-secret: ${{ secrets.password }}
+    environment-url: 'https://org74c41697.crm.dynamics.com/'
+    user-name: 'admin@M365x22902777.onmicrosoft.com'
+    password-secret: ${{ secrets.password }}
 
   - name: export-solution action
   uses: microsoft/powerplatform-actions/export-solution@v0
